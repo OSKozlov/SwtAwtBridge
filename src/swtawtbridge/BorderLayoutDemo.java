@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.awt.SWT_AWT;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
@@ -33,6 +34,10 @@ public class BorderLayoutDemo {
     
     java.awt.Frame embedded = SWT_AWT.new_Frame(comp);
     embedded.add(container);
+    
+    comp.pack();
+    
+    shell.setLayout(new FillLayout());
     
     shell.open();
     while (!shell.isDisposed()) {
